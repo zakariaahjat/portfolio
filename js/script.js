@@ -1,17 +1,3 @@
-if (typeof Lenis !== "undefined") {
-  const lenis = new Lenis({
-    duration: 1.3,
-    easing: (t) => Math.min(1, 1 - Math.pow(2, -10 * t)),
-    smooth: true
-  });
-
-  function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-  }
-  requestAnimationFrame(raf);
-}
-
 const cursor = document.getElementById("cursor");
 let mouseX = 0;
 let mouseY = 0;
