@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 750">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#be185d"/>
+      <stop offset="1" stop-color="#fb7185"/>
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="750" fill="url(#bg)"/>
+  <circle cx="140" cy="140" r="190" fill="#ffffff" opacity="0.08"/>
+  <circle cx="880" cy="640" r="220" fill="#ffffff" opacity="0.07"/>
+  <g transform="rotate(-4 500 375)">
+    <rect x="180" y="150" width="380" height="480" rx="16" fill="#ffffff"/>
+    <circle cx="370" cy="300" r="90" fill="#fb7185" opacity="0.35"/>
+    <path d="M300 300 a70 70 0 0 1 140 0 z" fill="#be185d"/>
+    <circle cx="370" cy="255" r="34" fill="#be185d"/>
+    <rect x="230" y="430" width="280" height="20" rx="10" fill="#0f172a" opacity="0.85"/>
+    <rect x="260" y="466" width="220" height="12" rx="6" fill="#cbd5e1"/>
+    <rect x="290" y="520" width="160" height="40" rx="20" fill="#38bdf8"/>
+  </g>
+  <g transform="rotate(5 700 400)">
+    <rect x="520" y="220" width="340" height="340" rx="16" fill="#101728"/>
+    <text x="690" y="330" font-family="Georgia, serif" font-size="64" font-style="italic" fill="#ffffff" text-anchor="middle">Aa</text>
+    <rect x="570" y="380" width="240" height="12" rx="6" fill="#475569"/>
+    <rect x="600" y="408" width="180" height="12" rx="6" fill="#334155"/>
+    <circle cx="620" cy="480" r="22" fill="#f43f5e"/>
+    <circle cx="690" cy="480" r="22" fill="#38bdf8"/>
+    <circle cx="760" cy="480" r="22" fill="#facc15"/>
+  </g>
+</svg>
