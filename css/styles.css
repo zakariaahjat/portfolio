@@ -624,8 +624,9 @@ a {
   border-radius: 14px;
   padding: 18px 24px;
   display: flex;
-  flex-direction: column;
-  gap: 4px;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
   transition: border-color 0.3s ease, transform 0.3s ease, background 0.3s ease;
 }
 
@@ -635,11 +636,28 @@ a {
   transform: translateY(-4px);
 }
 
+.chip-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(244, 241, 236, 0.1);
+  flex-shrink: 0;
+}
+
+.chip-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
 .contact-chip strong {
   font-size: 0.95rem;
 }
 
-.contact-chip span {
+.contact-chip .chip-text span {
   font-size: 0.85rem;
   opacity: 0.75;
 }
