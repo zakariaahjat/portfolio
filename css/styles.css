@@ -360,6 +360,10 @@ a {
   transform: scale(1.06);
 }
 
+.project-slider:hover .project_image {
+  transform: none;
+}
+
 .project_darken {
   position: absolute;
   inset: 0;
@@ -398,6 +402,76 @@ a {
   font-size: 0.92rem;
   opacity: 0.85;
   max-width: 420px;
+}
+
+.project-slider {
+  display: block;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.slider-track .slide {
+  flex: 0 0 100%;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.project-slider:hover .slider-track {
+  transform: scale(1.06);
+}
+
+.project-slider.slider-next .slider-track {
+  transform: translateX(-100%);
+}
+
+.slider-dots {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  display: flex;
+  gap: 6px;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 0.45s ease;
+}
+
+.project-slider:hover .slider-dots {
+  opacity: 1;
+}
+
+.slider-dots .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.45);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.slider-dots .dot.active {
+  background: #fff;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 2px;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.project-link:hover {
+  color: #fff;
+  border-color: #2f5bff;
 }
 
 .services {

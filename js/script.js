@@ -68,3 +68,29 @@ const lineObserver = new IntersectionObserver(
 document.querySelectorAll(".service_list").forEach((el) => lineObserver.observe(el));
 
 document.getElementById("year").textContent = new Date().getFullYear();
+
+const sliders = document.querySelectorAll(".project-slider");
+sliders.forEach((slider) => {
+  const dots = slider.querySelectorAll(".dot");
+  let current = 0;
+  const total = dots.length;
+  if (total < 2) return;
+
+  const go = (index) => {
+    current = index;
+    slider.classList.toggle("slider-next", current === 1);
+    dots.forEach((dot, i) => dot.classList.toggle("active", i === current));
+  };
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener("click", (e) => {
+      e.preventDefault();
+      go(i);
+    });
+  });
+
+  slider.addEventListener("click", (e) => {
+    if (e.target.closest(".dot") || e.target.closest("a")) return;
+    go((current + 1) % total);
+  });
+});
