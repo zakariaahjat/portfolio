@@ -883,6 +883,41 @@ a {
   transform: scale(1.05);
 }
 
+.lightbox-dots {
+  position: fixed;
+  left: 50%;
+  bottom: 26px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 11px;
+  background: rgba(244, 241, 236, 0.12);
+  border: 1px solid rgba(244, 241, 236, 0.2);
+  border-radius: 999px;
+  z-index: 1001;
+  visibility: hidden;
+}
+
+.lightbox.open .lightbox-dots:not(:empty) {
+  visibility: visible;
+}
+
+.lb-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background 0.3s ease, width 0.3s ease;
+}
+
+.lb-dot.active {
+  background: #fff;
+  width: 18px;
+  border-radius: 999px;
+}
+
 @media (max-width: 768px) {
   .lightbox-close,
   .lightbox-nav {
