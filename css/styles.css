@@ -410,6 +410,7 @@ a {
 
 .slider-track {
   display: flex;
+  transform: translateX(calc(var(--slide, 0) * -100%));
   transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
@@ -421,11 +422,7 @@ a {
 }
 
 .project-slider:hover .slider-track {
-  transform: scale(1.06);
-}
-
-.project-slider.slider-next .slider-track {
-  transform: translateX(-100%);
+  transform: translateX(calc(var(--slide, 0) * -100%)) scale(1.06);
 }
 
 .slider-dots {

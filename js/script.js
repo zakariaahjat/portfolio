@@ -78,7 +78,7 @@ sliders.forEach((slider) => {
 
   const go = (index) => {
     current = index;
-    slider.classList.toggle("slider-next", current === 1);
+    slider.style.setProperty("--slide", current);
     dots.forEach((dot, i) => dot.classList.toggle("active", i === current));
   };
 
